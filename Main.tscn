@@ -1,0 +1,404 @@
+[gd_scene load_steps=16 format=3 uid="uid://bcy3oyllu1ne5"]
+
+[ext_resource type="StyleBox" uid="uid://xxi8a8pobukg" path="res://Settings.tres" id="1_5vt1m"]
+[ext_resource type="PackedScene" uid="uid://wbqxvranq5va" path="res://Board.tscn" id="1_turci"]
+[ext_resource type="PackedScene" uid="uid://c155ymidjous5" path="res://Info.tscn" id="2_8acfh"]
+[ext_resource type="PackedScene" uid="uid://850g24igtxhw" path="res://ChatReceiver.tscn" id="3_k8p2f"]
+[ext_resource type="StyleBox" uid="uid://doj271jwy7wu4" path="res://PanelStyle.tres" id="3_nuwf2"]
+[ext_resource type="PackedScene" uid="uid://b0xa41mv3q4bd" path="res://ChatBoxx.tscn" id="4_f6k51"]
+[ext_resource type="Script" path="res://Arrows.gd" id="6_vs57j"]
+[ext_resource type="Script" path="res://Check.gd" id="8_mlqvy"]
+[ext_resource type="Script" path="res://AudioStreamPlayer.gd" id="9_q2yt0"]
+[ext_resource type="AudioStream" uid="uid://csmgnhdhikrdj" path="res://Shoe Step Stone Hard A.wav" id="9_tgq0a"]
+[ext_resource type="Script" path="res://QuitGame.gd" id="11_3qkox"]
+[ext_resource type="Script" path="res://MainMenu.gd" id="12_cosaj"]
+[ext_resource type="Texture2D" uid="uid://cqrhwjc16rbt7" path="res://Cursor.png" id="13_ec34g"]
+[ext_resource type="Script" path="res://Cursor.gd" id="13_hrfcf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqpmc"]
+bg_color = Color(0, 0, 0, 0.862745)
+
+[node name="Main" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_5vt1m")
+
+[node name="Board" parent="." instance=ExtResource("1_turci")]
+layout_mode = 1
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+
+[node name="Labels" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="A" type="Label" parent="Labels"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+offset_left = 500.0
+offset_top = 750.0
+offset_right = 575.0
+offset_bottom = 825.0
+theme_override_font_sizes/font_size = 50
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="A2" type="Label" parent="Labels"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+offset_left = 575.0
+offset_top = 750.0
+offset_right = 650.0
+offset_bottom = 825.0
+theme_override_font_sizes/font_size = 50
+text = "B"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="A3" type="Label" parent="Labels"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+offset_left = 650.0
+offset_top = 750.0
+offset_right = 725.0
+offset_bottom = 825.0
+theme_override_font_sizes/font_size = 50
+text = "C"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="A4" type="Label" parent="Labels"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+offset_left = 725.0
+offset_top = 750.0
+offset_right = 800.0
+offset_bottom = 825.0
+theme_override_font_sizes/font_size = 50
+text = "D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="A5" type="Label" parent="Labels"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+offset_left = 800.0
+offset_top = 750.0
+offset_right = 850.0
+offset_bottom = 800.0
+theme_override_font_sizes/font_size = 50
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="A6" type="Label" parent="Labels"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+offset_left = 875.0
+offset_top = 750.0
+offset_right = 950.0
+offset_bottom = 825.0
+theme_override_font_sizes/font_size = 50
+text = "F"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="A7" type="Label" parent="Labels"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+offset_left = 950.0
+offset_top = 750.0
+offset_right = 1025.0
+offset_bottom = 825.0
+theme_override_font_sizes/font_size = 50
+text = "G"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="A8" type="Label" parent="Labels"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+offset_left = 1025.0
+offset_top = 750.0
+offset_right = 1100.0
+offset_bottom = 825.0
+theme_override_font_sizes/font_size = 50
+text = "H"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="1" type="Label" parent="Labels"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+offset_left = 425.0
+offset_top = 675.0
+offset_right = 500.0
+offset_bottom = 750.0
+theme_override_font_sizes/font_size = 50
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2" type="Label" parent="Labels"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+offset_left = 425.0
+offset_top = 600.0
+offset_right = 500.0
+offset_bottom = 675.0
+theme_override_font_sizes/font_size = 50
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="3" type="Label" parent="Labels"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+offset_left = 425.0
+offset_top = 525.0
+offset_right = 500.0
+offset_bottom = 600.0
+theme_override_font_sizes/font_size = 50
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="4" type="Label" parent="Labels"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+offset_left = 425.0
+offset_top = 450.0
+offset_right = 500.0
+offset_bottom = 525.0
+theme_override_font_sizes/font_size = 50
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="5" type="Label" parent="Labels"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+offset_left = 425.0
+offset_top = 375.0
+offset_right = 500.0
+offset_bottom = 450.0
+theme_override_font_sizes/font_size = 50
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="6" type="Label" parent="Labels"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+offset_left = 425.0
+offset_top = 300.0
+offset_right = 500.0
+offset_bottom = 375.0
+theme_override_font_sizes/font_size = 50
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="7" type="Label" parent="Labels"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+offset_left = 425.0
+offset_top = 225.0
+offset_right = 500.0
+offset_bottom = 300.0
+theme_override_font_sizes/font_size = 50
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="8" type="Label" parent="Labels"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+offset_left = 425.0
+offset_top = 150.0
+offset_right = 500.0
+offset_bottom = 225.0
+theme_override_font_sizes/font_size = 50
+text = "8
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Debug" type="TextEdit" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 47.0
+offset_top = 40.0
+offset_right = 200.0
+offset_bottom = 100.0
+placeholder_text = "INPUT TEXT"
+
+[node name="DebugButton" type="Button" parent="Debug"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "Move"
+
+[node name="Info" parent="." instance=ExtResource("2_8acfh")]
+layout_mode = 1
+offset_left = 1200.0
+offset_top = 250.0
+offset_right = 1500.0
+offset_bottom = 350.0
+theme_override_styles/panel = ExtResource("3_nuwf2")
+
+[node name="ChatReceiver" parent="." instance=ExtResource("3_k8p2f")]
+
+[node name="ChatBox" parent="." instance=ExtResource("4_f6k51")]
+layout_mode = 0
+offset_left = 1200.0
+offset_top = 375.0
+offset_right = 1500.0
+offset_bottom = 650.0
+theme_override_styles/panel = ExtResource("3_nuwf2")
+
+[node name="Arrows" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 575.0
+offset_top = 225.0
+offset_right = 1025.0
+offset_bottom = 675.0
+mouse_filter = 2
+script = ExtResource("6_vs57j")
+
+[node name="HowTo" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 250.0
+offset_right = 400.0
+offset_bottom = 650.0
+theme_override_styles/panel = ExtResource("3_nuwf2")
+
+[node name="MarginContainer" type="MarginContainer" parent="HowTo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="RichTextLabel" parent="HowTo/MarginContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[font_size=32][center]게임 규칙[/center][/font_size]
+[font_size=14]
+
+ 1. 스트리머는 자신의 차례에, 자신의 
+	말들을 눌러 이동시킬 수 있습니다.
+
+ 2. 시청자들은 채팅창에 !와 옮길 말의 
+	위치, 	옮길 위치를 적어 이동합니다. 
+	(예시) !A7A5
+
+ 3. 불가능한 움직임이 선택 될 경우 
+	턴이 스킵됩니다.
+
+ 4. 시간이 지나면 턴이 스킵됩니다.
+
+ 5. 킹이 잡히면 끝납니다.
+
+ 6. 캐슬링, 앙파상 가능하고, 프로모션은 
+	자동적으로 퀸으로 됩니다."
+
+[node name="Msg" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 10
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yqpmc")
+script = ExtResource("8_mlqvy")
+
+[node name="Label" type="Label" parent="Msg"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 150
+text = "체크"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_tgq0a")
+volume_db = -2.0
+script = ExtResource("9_q2yt0")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -73.0
+offset_bottom = 58.0
+grow_horizontal = 0
+
+[node name="QuitGame" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+text = "게임 종료"
+script = ExtResource("11_3qkox")
+
+[node name="MainMenu" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+text = "메인 메뉴"
+script = ExtResource("12_cosaj")
+
+[node name="Cursor" type="Sprite2D" parent="."]
+z_index = 100
+position = Vector2(0.03, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("13_ec34g")
+offset = Vector2(8, 8)
+script = ExtResource("13_hrfcf")
+
+[connection signal="Checked" from="Board" to="Msg" method="_on_board_checked"]
+[connection signal="GameEnded" from="Board" to="Msg" method="_on_board_game_ended"]
+[connection signal="PawnMoved" from="Board" to="AudioStreamPlayer" method="_on_board_pawn_moved"]
+[connection signal="TurnChanged" from="Board" to="Info" method="_on_board_turn_changed"]
+[connection signal="TurnChanged" from="Board" to="Arrows" method="_on_board_turn_changed"]
+[connection signal="pressed" from="Debug/DebugButton" to="Arrows" method="_on_debug_button_pressed"]
+[connection signal="TimeOut" from="Info" to="Board" method="_on_info_time_out"]
+[connection signal="ChatReceived" from="ChatReceiver" to="ChatBox" method="_on_chat_receiver_chat_received"]
+[connection signal="ReceiveCoord" from="ChatBox" to="Arrows" method="_on_receive_coord"]
+[connection signal="pressed" from="HBoxContainer/QuitGame" to="HBoxContainer/QuitGame" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/MainMenu" to="HBoxContainer/MainMenu" method="_on_pressed"]

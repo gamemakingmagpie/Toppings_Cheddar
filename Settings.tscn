@@ -1,0 +1,695 @@
+[gd_scene load_steps=7 format=3 uid="uid://dkakfny2rnukp"]
+
+[ext_resource type="StyleBox" uid="uid://xxi8a8pobukg" path="res://Settings.tres" id="1_lr7oi"]
+[ext_resource type="Script" path="res://Settings.gd" id="2_f2wo0"]
+[ext_resource type="Script" path="res://Corner.gd" id="3_b0b06"]
+[ext_resource type="Texture2D" uid="uid://cmc3wuujtm0ee" path="res://Pieces/ChessSprite.png" id="3_sjvut"]
+[ext_resource type="Texture2D" uid="uid://cqrhwjc16rbt7" path="res://Cursor.png" id="5_4kcr1"]
+[ext_resource type="Script" path="res://Cursor.gd" id="6_bs60w"]
+
+[node name="Settings" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_lr7oi")
+script = ExtResource("2_f2wo0")
+
+[node name="Label2" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -459.0
+offset_top = 37.0
+offset_right = 527.0
+offset_bottom = 544.0
+grow_horizontal = 2
+bbcode_enabled = true
+text = "[tornado radius=5.0 freq=1.0 connected=1][color=#bbb011][font_size=400]체 다[/font_size][/color]"
+
+[node name="Label" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -448.0
+offset_top = 43.0
+offset_right = 508.0
+offset_bottom = 520.0
+grow_horizontal = 2
+bbcode_enabled = true
+text = "[tornado radius=5.0 freq=1.0 connected=1][color=#ddde55][font_size=400]체 다[/font_size][/color]"
+
+[node name="Label4" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -259.0
+offset_top = 18.0
+offset_right = 309.0
+offset_bottom = 85.0
+grow_horizontal = 2
+bbcode_enabled = true
+text = "[tornado radius=5.0 freq=1.0 connected=1][color=#bbb011][font_size=50]게임 만드는 까치의 토핑[/font_size][/color]"
+
+[node name="Label3" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -257.0
+offset_top = 20.0
+offset_right = 264.0
+offset_bottom = 87.0
+grow_horizontal = 2
+bbcode_enabled = true
+text = "[tornado radius=5.0 freq=1.0 connected=1][color=#ddde55][font_size=50]게임 만드는 까치의 토핑[/font_size][/color]"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -421.0
+offset_top = 80.0
+offset_right = 421.0
+offset_bottom = 418.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="LinkAddress" type="TextEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(500, 60)
+layout_mode = 2
+focus_mode = 1
+theme_override_font_sizes/font_size = 40
+placeholder_text = "chzzk.naver.com/live/_____여기있는거_____"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="StreamerNameInput" type="TextEdit" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+placeholder_text = "스트리머"
+
+[node name="CheckBox" type="Button" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(120, 60)
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+flat = true
+
+[node name="Pawn" type="Sprite2D" parent="VBoxContainer/HBoxContainer/CheckBox"]
+texture_filter = 1
+position = Vector2(30, 30)
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Pawn2" type="Sprite2D" parent="VBoxContainer/HBoxContainer/CheckBox"]
+modulate = Color(0.14902, 0.14902, 0.14902, 1)
+texture_filter = 1
+position = Vector2(89, 30)
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="ViewerNameInput" type="TextEdit" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+placeholder_text = "시청자"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="5s" type="Button" parent="VBoxContainer/HBoxContainer2"]
+modulate = Color(1, 1, 1, 0.101961)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 50
+toggle_mode = true
+text = "10초 "
+
+[node name="10s" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 50
+toggle_mode = true
+button_pressed = true
+text = "15초"
+
+[node name="15s" type="Button" parent="VBoxContainer/HBoxContainer2"]
+modulate = Color(1, 1, 1, 0.101961)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 50
+toggle_mode = true
+text = "20초"
+
+[node name="20s" type="Button" parent="VBoxContainer/HBoxContainer2"]
+modulate = Color(1, 1, 1, 0.101961)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 50
+toggle_mode = true
+text = "30초"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="StartGame" type="Button" parent="VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+theme_override_font_sizes/font_size = 50
+text = "게임 시작"
+
+[node name="EndGame" type="Button" parent="VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+theme_override_font_sizes/font_size = 50
+text = "게임 종료"
+
+[node name="Corner" type="Node2D" parent="."]
+rotation = 5.2674
+scale = Vector2(2, 2)
+script = ExtResource("3_b0b06")
+
+[node name="Pawn" type="Sprite2D" parent="Corner"]
+texture_filter = 1
+position = Vector2(100, 0)
+rotation = 1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Rook" type="Sprite2D" parent="Corner"]
+texture_filter = 1
+position = Vector2(50, 86.603)
+rotation = 2.61799
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+
+[node name="Knight" type="Sprite2D" parent="Corner"]
+texture_filter = 1
+position = Vector2(50, -83.6)
+rotation = 0.523599
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="Bishop" type="Sprite2D" parent="Corner"]
+texture_filter = 1
+position = Vector2(-50, 83.6)
+rotation = -2.61799
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(96, 0, 32, 32)
+
+[node name="Queen" type="Sprite2D" parent="Corner"]
+texture_filter = 1
+position = Vector2(-50, -83.6)
+rotation = -0.523599
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(128, 0, 32, 32)
+
+[node name="King" type="Sprite2D" parent="Corner"]
+texture_filter = 1
+position = Vector2(-100, 0)
+rotation = -1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(160, 0, 32, 32)
+
+[node name="Corner5" type="Node2D" parent="."]
+rotation = 2.672
+scale = Vector2(2, 2)
+script = ExtResource("3_b0b06")
+
+[node name="Pawn" type="Sprite2D" parent="Corner5"]
+texture_filter = 1
+position = Vector2(100, 0)
+rotation = 1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Rook" type="Sprite2D" parent="Corner5"]
+texture_filter = 1
+position = Vector2(50, 86.603)
+rotation = 2.61799
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+
+[node name="Knight" type="Sprite2D" parent="Corner5"]
+texture_filter = 1
+position = Vector2(50, -83.6)
+rotation = 0.523599
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="Bishop" type="Sprite2D" parent="Corner5"]
+texture_filter = 1
+position = Vector2(-50, 83.6)
+rotation = -2.61799
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(96, 0, 32, 32)
+
+[node name="Queen" type="Sprite2D" parent="Corner5"]
+texture_filter = 1
+position = Vector2(-50, -83.6)
+rotation = -0.523599
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(128, 0, 32, 32)
+
+[node name="King" type="Sprite2D" parent="Corner5"]
+texture_filter = 1
+position = Vector2(-100, 0)
+rotation = -1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(160, 0, 32, 32)
+
+[node name="Corner3" type="Node2D" parent="."]
+position = Vector2(1600, 900)
+rotation = 5.2674
+scale = Vector2(2, 2)
+script = ExtResource("3_b0b06")
+
+[node name="Pawn" type="Sprite2D" parent="Corner3"]
+texture_filter = 1
+position = Vector2(100, 0)
+rotation = 1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Rook" type="Sprite2D" parent="Corner3"]
+texture_filter = 1
+position = Vector2(50, 86.603)
+rotation = 2.61799
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+
+[node name="Knight" type="Sprite2D" parent="Corner3"]
+texture_filter = 1
+position = Vector2(50, -83.6)
+rotation = 0.523599
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="Bishop" type="Sprite2D" parent="Corner3"]
+texture_filter = 1
+position = Vector2(-50, 83.6)
+rotation = -2.61799
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(96, 0, 32, 32)
+
+[node name="Queen" type="Sprite2D" parent="Corner3"]
+texture_filter = 1
+position = Vector2(-50, -83.6)
+rotation = -0.523599
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(128, 0, 32, 32)
+
+[node name="King" type="Sprite2D" parent="Corner3"]
+texture_filter = 1
+position = Vector2(-100, 0)
+rotation = -1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(160, 0, 32, 32)
+
+[node name="Corner6" type="Node2D" parent="."]
+position = Vector2(1600, 900)
+rotation = 2.61799
+scale = Vector2(2, 2)
+script = ExtResource("3_b0b06")
+
+[node name="Pawn" type="Sprite2D" parent="Corner6"]
+texture_filter = 1
+position = Vector2(100, 0)
+rotation = 1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Rook" type="Sprite2D" parent="Corner6"]
+texture_filter = 1
+position = Vector2(50, 86.603)
+rotation = 2.61799
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+
+[node name="Knight" type="Sprite2D" parent="Corner6"]
+texture_filter = 1
+position = Vector2(50, -83.6)
+rotation = 0.523599
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="Bishop" type="Sprite2D" parent="Corner6"]
+texture_filter = 1
+position = Vector2(-50, 83.6)
+rotation = -2.61799
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(96, 0, 32, 32)
+
+[node name="Queen" type="Sprite2D" parent="Corner6"]
+texture_filter = 1
+position = Vector2(-50, -83.6)
+rotation = -0.523599
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(128, 0, 32, 32)
+
+[node name="King" type="Sprite2D" parent="Corner6"]
+texture_filter = 1
+position = Vector2(-100, 0)
+rotation = -1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(160, 0, 32, 32)
+
+[node name="Corner2" type="Node2D" parent="."]
+modulate = Color(0.172549, 0.172549, 0.172549, 1)
+position = Vector2(1602, -6.10352e-05)
+rotation = 5.2674
+scale = Vector2(2, 2)
+script = ExtResource("3_b0b06")
+
+[node name="Pawn" type="Sprite2D" parent="Corner2"]
+texture_filter = 1
+position = Vector2(100, 0)
+rotation = 1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Rook" type="Sprite2D" parent="Corner2"]
+texture_filter = 1
+position = Vector2(50, 86.603)
+rotation = 2.61799
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+
+[node name="Knight" type="Sprite2D" parent="Corner2"]
+texture_filter = 1
+position = Vector2(50, -83.6)
+rotation = 0.523599
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="Bishop" type="Sprite2D" parent="Corner2"]
+texture_filter = 1
+position = Vector2(-50, 83.6)
+rotation = -2.61799
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(96, 0, 32, 32)
+
+[node name="Queen" type="Sprite2D" parent="Corner2"]
+texture_filter = 1
+position = Vector2(-50, -83.6)
+rotation = -0.523599
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(128, 0, 32, 32)
+
+[node name="King" type="Sprite2D" parent="Corner2"]
+texture_filter = 1
+position = Vector2(-100, 0)
+rotation = -1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(160, 0, 32, 32)
+
+[node name="Corner7" type="Node2D" parent="."]
+modulate = Color(0.172549, 0.172549, 0.172549, 1)
+position = Vector2(1602, -6.10352e-05)
+rotation = 2.61799
+scale = Vector2(2, 2)
+script = ExtResource("3_b0b06")
+
+[node name="Pawn" type="Sprite2D" parent="Corner7"]
+texture_filter = 1
+position = Vector2(100, 0)
+rotation = 1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Rook" type="Sprite2D" parent="Corner7"]
+texture_filter = 1
+position = Vector2(50, 86.603)
+rotation = 2.61799
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+
+[node name="Knight" type="Sprite2D" parent="Corner7"]
+texture_filter = 1
+position = Vector2(50, -83.6)
+rotation = 0.523599
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="Bishop" type="Sprite2D" parent="Corner7"]
+texture_filter = 1
+position = Vector2(-50, 83.6)
+rotation = -2.61799
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(96, 0, 32, 32)
+
+[node name="Queen" type="Sprite2D" parent="Corner7"]
+texture_filter = 1
+position = Vector2(-50, -83.6)
+rotation = -0.523599
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(128, 0, 32, 32)
+
+[node name="King" type="Sprite2D" parent="Corner7"]
+texture_filter = 1
+position = Vector2(-100, 0)
+rotation = -1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(160, 0, 32, 32)
+
+[node name="Corner4" type="Node2D" parent="."]
+modulate = Color(0.172549, 0.172549, 0.172549, 1)
+position = Vector2(0, 900)
+rotation = 5.2674
+scale = Vector2(2, 2)
+script = ExtResource("3_b0b06")
+
+[node name="Pawn" type="Sprite2D" parent="Corner4"]
+texture_filter = 1
+position = Vector2(100, 0)
+rotation = 1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Rook" type="Sprite2D" parent="Corner4"]
+texture_filter = 1
+position = Vector2(50, 86.603)
+rotation = 2.61799
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+
+[node name="Knight" type="Sprite2D" parent="Corner4"]
+texture_filter = 1
+position = Vector2(50, -83.6)
+rotation = 0.523599
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="Bishop" type="Sprite2D" parent="Corner4"]
+texture_filter = 1
+position = Vector2(-50, 83.6)
+rotation = -2.61799
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(96, 0, 32, 32)
+
+[node name="Queen" type="Sprite2D" parent="Corner4"]
+texture_filter = 1
+position = Vector2(-50, -83.6)
+rotation = -0.523599
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(128, 0, 32, 32)
+
+[node name="King" type="Sprite2D" parent="Corner4"]
+texture_filter = 1
+position = Vector2(-100, 0)
+rotation = -1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(160, 0, 32, 32)
+
+[node name="Corner8" type="Node2D" parent="."]
+modulate = Color(0.172549, 0.172549, 0.172549, 1)
+position = Vector2(0, 900)
+rotation = 7.85397
+scale = Vector2(2, 2)
+script = ExtResource("3_b0b06")
+
+[node name="Pawn" type="Sprite2D" parent="Corner8"]
+texture_filter = 1
+position = Vector2(100, 0)
+rotation = 1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Rook" type="Sprite2D" parent="Corner8"]
+texture_filter = 1
+position = Vector2(50, 86.603)
+rotation = 2.61799
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+
+[node name="Knight" type="Sprite2D" parent="Corner8"]
+texture_filter = 1
+position = Vector2(50, -83.6)
+rotation = 0.523599
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="Bishop" type="Sprite2D" parent="Corner8"]
+texture_filter = 1
+position = Vector2(-50, 83.6)
+rotation = -2.61799
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(96, 0, 32, 32)
+
+[node name="Queen" type="Sprite2D" parent="Corner8"]
+texture_filter = 1
+position = Vector2(-50, -83.6)
+rotation = -0.523599
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(128, 0, 32, 32)
+
+[node name="King" type="Sprite2D" parent="Corner8"]
+texture_filter = 1
+position = Vector2(-100, 0)
+rotation = -1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("3_sjvut")
+region_enabled = true
+region_rect = Rect2(160, 0, 32, 32)
+
+[node name="Cursor" type="Sprite2D" parent="."]
+z_index = 100
+position = Vector2(0.03, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("5_4kcr1")
+offset = Vector2(8, 8)
+script = ExtResource("6_bs60w")
+
+[connection signal="text_changed" from="VBoxContainer/HBoxContainer/StreamerNameInput" to="." method="_on_streamer_name_input_text_changed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/CheckBox" to="." method="_on_check_box_pressed"]
+[connection signal="text_changed" from="VBoxContainer/HBoxContainer/ViewerNameInput" to="." method="_on_viewer_name_input_text_changed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/5s" to="." method="_on_5s_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/10s" to="." method="_on_10s_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/15s" to="." method="_on_15s_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/20s" to="." method="_on_20s_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer3/StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer3/EndGame" to="." method="_on_start_game_end_pressed"]

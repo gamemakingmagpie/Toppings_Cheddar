@@ -1,0 +1,49 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="체 다"
+config/description="치지직 채팅 연동 스트리머와 시청자 간의 체스 대결!"
+run/main_scene="res://Settings.tscn"
+config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+config/icon="res://Pieces/Single_Pawn.png"
+
+[autoload]
+
+Global="*res://Global.gd"
+
+[debug]
+
+settings/stdout/print_fps=true
+
+[display]
+
+window/size/viewport_width=1600
+window/size/viewport_height=900
+window/size/resizable=false
+window/size/borderless=true
+window/subwindows/embed_subwindows=false
+window/stretch/mode="viewport"
+window/vsync/vsync_mode=0
+
+[gui]
+
+theme/custom_font="res://NanumGothicExtraBold.ttf"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

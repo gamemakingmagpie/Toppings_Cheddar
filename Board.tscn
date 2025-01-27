@@ -1,0 +1,780 @@
+[gd_scene load_steps=5 format=3 uid="uid://wbqxvranq5va"]
+
+[ext_resource type="Script" path="res://Board.gd" id="1_s7q4c"]
+[ext_resource type="PackedScene" uid="uid://c4dkl1upv13pq" path="res://Squre.tscn" id="2_fndp4"]
+[ext_resource type="StyleBox" uid="uid://da2lhhnig1utc" path="res://SqureColor_B.tres" id="3_8duxt"]
+[ext_resource type="PackedScene" uid="uid://dj6yy4pep3ap8" path="res://Pieces/Pieces.tscn" id="4_ye0ki"]
+
+[node name="Board" type="Control"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s7q4c")
+
+[node name="A1" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = -100.0
+offset_top = 425.0
+offset_right = -25.0
+offset_bottom = 500.0
+
+[node name="Pawn" parent="A1" instance=ExtResource("4_ye0ki")]
+region_rect = Rect2(32, 0, 32, 32)
+Name = "Rook"
+
+[node name="A2" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = -100.0
+offset_top = 350.0
+offset_right = -25.0
+offset_bottom = 425.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="Pawn" parent="A2" instance=ExtResource("4_ye0ki")]
+region_rect = Rect2(0, 0, 32, 32)
+Name = "Pawn"
+
+[node name="A3" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = -100.0
+offset_top = 275.0
+offset_right = -25.0
+offset_bottom = 350.0
+
+[node name="A4" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = -100.0
+offset_top = 200.0
+offset_right = -25.0
+offset_bottom = 275.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="A5" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = -100.0
+offset_top = 125.0
+offset_right = -25.0
+offset_bottom = 200.0
+
+[node name="A6" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = -100.0
+offset_top = 50.0
+offset_right = -25.0
+offset_bottom = 125.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="A7" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = -100.0
+offset_top = -25.0
+offset_right = -25.0
+offset_bottom = 50.0
+
+[node name="Pawn" parent="A7" instance=ExtResource("4_ye0ki")]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+region_rect = Rect2(0, 0, 32, 32)
+IsWhite = false
+Name = "Pawn"
+
+[node name="A8" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -25.0
+offset_bottom = -25.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="Pawn" parent="A8" instance=ExtResource("4_ye0ki")]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+region_rect = Rect2(32, 0, 32, 32)
+IsWhite = false
+Name = "Rook"
+
+[node name="B8" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = -25.0
+offset_top = -100.0
+offset_right = 50.0
+offset_bottom = -25.0
+
+[node name="Pawn" parent="B8" instance=ExtResource("4_ye0ki")]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+IsWhite = false
+
+[node name="B7" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 50.0
+offset_bottom = 50.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="Pawn" parent="B7" instance=ExtResource("4_ye0ki")]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+region_rect = Rect2(0, 0, 32, 32)
+IsWhite = false
+Name = "Pawn"
+
+[node name="B6" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = -25.0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 125.0
+
+[node name="B5" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = -25.0
+offset_top = 125.0
+offset_right = 50.0
+offset_bottom = 200.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="B4" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = -25.0
+offset_top = 200.0
+offset_right = 50.0
+offset_bottom = 275.0
+
+[node name="B3" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = -25.0
+offset_top = 275.0
+offset_right = 50.0
+offset_bottom = 350.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="B2" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = -25.0
+offset_top = 350.0
+offset_right = 50.0
+offset_bottom = 425.0
+
+[node name="Pawn" parent="B2" instance=ExtResource("4_ye0ki")]
+region_rect = Rect2(0, 0, 32, 32)
+Name = "Pawn"
+
+[node name="B1" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = -25.0
+offset_top = 425.0
+offset_right = 50.0
+offset_bottom = 500.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="Pawn" parent="B1" instance=ExtResource("4_ye0ki")]
+
+[node name="C8" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 50.0
+offset_top = -100.0
+offset_right = 125.0
+offset_bottom = -25.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="Pawn" parent="C8" instance=ExtResource("4_ye0ki")]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+region_rect = Rect2(96, 0, 32, 32)
+IsWhite = false
+Name = "Bishop"
+
+[node name="C7" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 50.0
+offset_top = -25.0
+offset_right = 125.0
+offset_bottom = 50.0
+
+[node name="Pawn" parent="C7" instance=ExtResource("4_ye0ki")]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+region_rect = Rect2(0, 0, 32, 32)
+IsWhite = false
+Name = "Pawn"
+
+[node name="C6" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 125.0
+offset_bottom = 125.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="C5" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 125.0
+offset_right = 125.0
+offset_bottom = 200.0
+
+[node name="C4" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 200.0
+offset_right = 125.0
+offset_bottom = 275.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="C3" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 275.0
+offset_right = 125.0
+offset_bottom = 350.0
+
+[node name="C2" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 350.0
+offset_right = 125.0
+offset_bottom = 425.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="Pawn" parent="C2" instance=ExtResource("4_ye0ki")]
+region_rect = Rect2(0, 0, 32, 32)
+Name = "Pawn"
+
+[node name="C1" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 425.0
+offset_right = 125.0
+offset_bottom = 500.0
+
+[node name="Pawn" parent="C1" instance=ExtResource("4_ye0ki")]
+region_rect = Rect2(96, 0, 32, 32)
+Name = "Bishop"
+
+[node name="D8" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 125.0
+offset_top = -100.0
+offset_right = 200.0
+offset_bottom = -25.0
+
+[node name="Pawn" parent="D8" instance=ExtResource("4_ye0ki")]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+region_rect = Rect2(128, 0, 32, 32)
+IsWhite = false
+Name = "Queen"
+
+[node name="D7" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 125.0
+offset_top = -25.0
+offset_right = 200.0
+offset_bottom = 50.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="Pawn" parent="D7" instance=ExtResource("4_ye0ki")]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+region_rect = Rect2(0, 0, 32, 32)
+IsWhite = false
+Name = "Pawn"
+
+[node name="D6" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 125.0
+offset_top = 50.0
+offset_right = 200.0
+offset_bottom = 125.0
+
+[node name="D5" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 125.0
+offset_top = 125.0
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="D4" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 125.0
+offset_top = 200.0
+offset_right = 200.0
+offset_bottom = 275.0
+
+[node name="D3" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 125.0
+offset_top = 275.0
+offset_right = 200.0
+offset_bottom = 350.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="D2" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 125.0
+offset_top = 350.0
+offset_right = 200.0
+offset_bottom = 425.0
+
+[node name="Pawn" parent="D2" instance=ExtResource("4_ye0ki")]
+region_rect = Rect2(0, 0, 32, 32)
+Name = "Pawn"
+
+[node name="D1" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 125.0
+offset_top = 425.0
+offset_right = 200.0
+offset_bottom = 500.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="Pawn" parent="D1" instance=ExtResource("4_ye0ki")]
+region_rect = Rect2(128, 0, 32, 32)
+Name = "Queen"
+
+[node name="E8" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 200.0
+offset_top = -100.0
+offset_right = 275.0
+offset_bottom = -25.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="Pawn" parent="E8" instance=ExtResource("4_ye0ki")]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+region_rect = Rect2(160, 0, 32, 32)
+IsWhite = false
+Name = "King"
+
+[node name="E7" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 200.0
+offset_top = -25.0
+offset_right = 275.0
+offset_bottom = 50.0
+
+[node name="Pawn" parent="E7" instance=ExtResource("4_ye0ki")]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+region_rect = Rect2(0, 0, 32, 32)
+IsWhite = false
+Name = "Pawn"
+
+[node name="E6" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 200.0
+offset_top = 50.0
+offset_right = 275.0
+offset_bottom = 125.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="E5" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 200.0
+offset_top = 125.0
+offset_right = 275.0
+offset_bottom = 200.0
+
+[node name="E4" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 200.0
+offset_top = 200.0
+offset_right = 275.0
+offset_bottom = 275.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="E3" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 200.0
+offset_top = 275.0
+offset_right = 275.0
+offset_bottom = 350.0
+
+[node name="E2" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 200.0
+offset_top = 350.0
+offset_right = 275.0
+offset_bottom = 425.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="Pawn" parent="E2" instance=ExtResource("4_ye0ki")]
+region_rect = Rect2(0, 0, 32, 32)
+Name = "Pawn"
+
+[node name="E1" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 200.0
+offset_top = 425.0
+offset_right = 275.0
+offset_bottom = 500.0
+
+[node name="Pawn" parent="E1" instance=ExtResource("4_ye0ki")]
+region_rect = Rect2(160, 0, 32, 32)
+Name = "King"
+
+[node name="F8" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 275.0
+offset_top = -100.0
+offset_right = 350.0
+offset_bottom = -25.0
+
+[node name="Pawn" parent="F8" instance=ExtResource("4_ye0ki")]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+region_rect = Rect2(96, 0, 32, 32)
+IsWhite = false
+Name = "Bishop"
+
+[node name="F7" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 275.0
+offset_top = -25.0
+offset_right = 350.0
+offset_bottom = 50.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="Pawn" parent="F7" instance=ExtResource("4_ye0ki")]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+region_rect = Rect2(0, 0, 32, 32)
+IsWhite = false
+Name = "Pawn"
+
+[node name="F6" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 275.0
+offset_top = 50.0
+offset_right = 350.0
+offset_bottom = 125.0
+
+[node name="F5" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 275.0
+offset_top = 125.0
+offset_right = 350.0
+offset_bottom = 200.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="F4" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 275.0
+offset_top = 200.0
+offset_right = 350.0
+offset_bottom = 275.0
+
+[node name="F3" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 275.0
+offset_top = 275.0
+offset_right = 350.0
+offset_bottom = 350.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="F2" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 275.0
+offset_top = 350.0
+offset_right = 350.0
+offset_bottom = 425.0
+
+[node name="Pawn" parent="F2" instance=ExtResource("4_ye0ki")]
+region_rect = Rect2(0, 0, 32, 32)
+Name = "Pawn"
+
+[node name="F1" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 275.0
+offset_top = 425.0
+offset_right = 350.0
+offset_bottom = 500.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="Pawn" parent="F1" instance=ExtResource("4_ye0ki")]
+region_rect = Rect2(96, 0, 32, 32)
+Name = "Bishop"
+
+[node name="G8" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 350.0
+offset_top = -100.0
+offset_right = 425.0
+offset_bottom = -25.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="Pawn" parent="G8" instance=ExtResource("4_ye0ki")]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+IsWhite = false
+
+[node name="G7" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 350.0
+offset_top = -25.0
+offset_right = 425.0
+offset_bottom = 50.0
+
+[node name="Pawn" parent="G7" instance=ExtResource("4_ye0ki")]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+region_rect = Rect2(0, 0, 32, 32)
+IsWhite = false
+Name = "Pawn"
+
+[node name="G6" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 350.0
+offset_top = 50.0
+offset_right = 425.0
+offset_bottom = 125.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="G5" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 350.0
+offset_top = 125.0
+offset_right = 425.0
+offset_bottom = 200.0
+
+[node name="G4" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 350.0
+offset_top = 200.0
+offset_right = 425.0
+offset_bottom = 275.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="G3" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 350.0
+offset_top = 275.0
+offset_right = 425.0
+offset_bottom = 350.0
+
+[node name="G2" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 350.0
+offset_top = 350.0
+offset_right = 425.0
+offset_bottom = 425.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="Pawn" parent="G2" instance=ExtResource("4_ye0ki")]
+region_rect = Rect2(0, 0, 32, 32)
+Name = "Pawn"
+
+[node name="G1" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 350.0
+offset_top = 425.0
+offset_right = 425.0
+offset_bottom = 500.0
+
+[node name="Pawn" parent="G1" instance=ExtResource("4_ye0ki")]
+
+[node name="H8" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 425.0
+offset_top = -100.0
+offset_right = 500.0
+offset_bottom = -25.0
+
+[node name="Pawn" parent="H8" instance=ExtResource("4_ye0ki")]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+region_rect = Rect2(32, 0, 32, 32)
+IsWhite = false
+Name = "Rook"
+
+[node name="H7" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 425.0
+offset_top = -25.0
+offset_right = 500.0
+offset_bottom = 50.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="Pawn" parent="H7" instance=ExtResource("4_ye0ki")]
+modulate = Color(0.411765, 0.411765, 0.411765, 1)
+region_rect = Rect2(0, 0, 32, 32)
+IsWhite = false
+Name = "Pawn"
+
+[node name="H6" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 425.0
+offset_top = 50.0
+offset_right = 500.0
+offset_bottom = 125.0
+
+[node name="H5" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 425.0
+offset_top = 125.0
+offset_right = 500.0
+offset_bottom = 200.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="H4" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 425.0
+offset_top = 200.0
+offset_right = 500.0
+offset_bottom = 275.0
+
+[node name="H3" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 425.0
+offset_top = 275.0
+offset_right = 500.0
+offset_bottom = 350.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="H2" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 425.0
+offset_top = 350.0
+offset_right = 500.0
+offset_bottom = 425.0
+
+[node name="Pawn" parent="H2" instance=ExtResource("4_ye0ki")]
+region_rect = Rect2(0, 0, 32, 32)
+Name = "Pawn"
+
+[node name="H1" parent="." instance=ExtResource("2_fndp4")]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 0
+offset_left = 425.0
+offset_top = 425.0
+offset_right = 500.0
+offset_bottom = 500.0
+theme_override_styles/normal = ExtResource("3_8duxt")
+theme_override_styles/hover = ExtResource("3_8duxt")
+theme_override_styles/pressed = ExtResource("3_8duxt")
+
+[node name="Pawn" parent="H1" instance=ExtResource("4_ye0ki")]
+region_rect = Rect2(32, 0, 32, 32)
+Name = "Rook"
+
+[connection signal="GameEnded" from="." to="." method="_on_game_ended"]
